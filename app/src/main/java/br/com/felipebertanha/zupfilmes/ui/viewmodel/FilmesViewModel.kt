@@ -36,4 +36,8 @@ class FilmesViewModel : ViewModel() {
     ) {
         repository.buscarFilmePorTituloWS(titulo, callback)
     }
+
+    fun buscarFilmePorImdbId(imdbID: String): Filme {
+        return repository.buscarFilmePorImdbId(imdbID)
+    }
 }

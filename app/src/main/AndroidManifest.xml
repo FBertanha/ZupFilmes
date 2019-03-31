@@ -6,22 +6,18 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
+        android:name=".app.App"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
-            android:name=".app.App"
             android:usesCleartextTraffic="true">
-        <activity
-                android:name=".ui.activity.DetalhesFilmeActivity"
-                android:label="@string/title_activity_detalhes_filme"
-                android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".ui.activity.DetalhesActivity">
         </activity>
         <activity
                 android:name=".ui.activity.PrincipalActivity"
-                android:label="@string/title_activity_filmes"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

@@ -40,4 +40,8 @@ class FilmeRepository(val context: Context) {
             .enqueue(callback)
     }
 
+    fun buscarFilmePorImdbId(imdbID: String): Filme {
+        return filmeDao.getPorImdbID(imdbID)
+    }
+
 }

@@ -8,7 +8,6 @@ import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import br.com.felipebertanha.zupfilmes.R
-import br.com.felipebertanha.zupfilmes.data.repository.FilmeRepository
 import br.com.felipebertanha.zupfilmes.eventbus.BuscarFilmeEvent
 import br.com.felipebertanha.zupfilmes.eventbus.ExibirDetalhesFilmeEvent
 import br.com.felipebertanha.zupfilmes.ui.UiConstantes
@@ -88,8 +87,7 @@ class PrincipalActivity : AppCompatActivity() {
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onExibirDetalhesFilme(event: ExibirDetalhesFilmeEvent) {
 
-        val intent = Intent(this, DetalhesFilmeActivity::class.java)
-        FilmeRepository(this).adicionarFilmeAosFavoritos(event.filme)
+        val intent = Intent(this, DetalhesActivity::class.java)
         intent.putExtra(UiConstantes.KEY_FILME, event.filme)
         startActivity(intent)
     }

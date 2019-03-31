@@ -15,4 +15,7 @@ interface FilmeDao {
 
     @Query("SELECT * FROM Filme")
     fun todos(): LiveData<List<Filme>>
+
+    @Query("SELECT * FROM Filme WHERE imdbID = :imdbID")
+    fun getPorImdbID(imdbID: String): Filme
 }

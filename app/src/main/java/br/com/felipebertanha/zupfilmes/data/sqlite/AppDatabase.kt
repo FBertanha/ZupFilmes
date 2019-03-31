@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import br.com.felipebertanha.zupfilmes.data.dao.FilmeDao
 import br.com.felipebertanha.zupfilmes.data.model.Filme
 
-@Database(entities = [Filme::class], version = 1)
+@Database(entities = [Filme::class], version = 2)
 abstract class AppDatabase : RoomDatabase() {
 
     companion object {
@@ -19,6 +19,7 @@ abstract class AppDatabase : RoomDatabase() {
             if (INSTANCE == null) {
                 INSTANCE = Room.databaseBuilder(context.applicationContext, AppDatabase::class.java, DATABASE_NAME)
                     .allowMainThreadQueries()
+                    .fallbackToDestructiveMigration()
                     .build()
             }
             return INSTANCE

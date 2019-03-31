@@ -21,7 +21,8 @@ data class Filme(
     @SerializedName("Poster")
     val poster: String,
     @SerializedName("imdbRating")
-    val imdbNota: String
+    val imdbNota: String,
+    var isFavorito: Boolean
 ) : Serializable
 
 
