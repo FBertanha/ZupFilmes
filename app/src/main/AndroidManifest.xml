@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="br.com.felipebertanha.zupfilmes">
+
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
@@ -10,10 +11,16 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:usesCleartextTraffic="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:name=".app.App"
+            android:usesCleartextTraffic="true">
         <activity
-                android:name=".ui.PrincipalActivity"
+                android:name=".ui.activity.DetalhesFilmeActivity"
+                android:label="@string/title_activity_detalhes_filme"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".ui.activity.PrincipalActivity"
                 android:label="@string/title_activity_filmes"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
