@@ -1,3 +1,22 @@
-# ZupFilmes
+# Zup Filmes
 
-Projeto Zup Filmes
+App para pesquisa de filmes utilizando a api [OMDb API](http://www.omdbapi.com/)
+
+
+<p float="left">  
+  <img src="https://lh3.googleusercontent.com/S-6hQSdcremxj_u6-CKXH9jizu9OFNBzHttit2TG7PirOQFAGACsAAOSU1o8Xrg9PhfgdNL2UfBz8PXQU6u9FSu2fhxfyPqQaC1YUmEWXNMBfsuWL6Ck7cTSOqnsdQZA5rT44VNd37vnr-r3WUtoAMmPzrENTXJnL563LuLOKblrQEfATHAH_15ouGQjy3fXm0kpYkLNH7GI1EcBHgd9viJQq_Au3T7kBfhwYgeTrPknS3MkjP7wqktOuCGatbkt3-ByKz9T-aN0y-VrRNfNg10qdcaY_VwSx9qiKF2QIyMRiDed9xauFFxd8izabN4m4Tfgx6_pyepkBVWrjn1fs9HLa_aqnqTPXJZweGIie9-AsIvoFWd8-om24-ymmrvgQKukK4yuF22Ja2RLAx8lAategDnjEJhIPpDjY57eMhvVfZX8W2gwaNlJk5jjPkBND5zv5xJjZ9IxFKR3IV2_3XFFYQdR5rYzrTJvJdcoR4KalcY0bqGKiEWFZuL5b86wFn9waXyTGD0zQnynGCfMluE3O3ucjpD5T0VAmVZmXrD4MDA9ZnN4SYLkYKCV1nYSpAms-nm3QT4N0dX1gbehKsOKZSnkHA88GtxgFekqysMeoD1-pfCjMD4OHbCcf3DcgV7OhoToqCL99N1oiW_REVGEMZqruaQ=w413-h733-no" width="200" /> 
+  <img src="https://lh3.googleusercontent.com/JOJXoqqgQwzTr1lrSvtkg2ZUKoJwNso4YjUV_-5Sod2audu0XObbwiK0_S-cWE2Jlxocq7Q0tmxywYWdiA-Dw1UYPCUYQqAqzZf-3U5gus1SR2E-uVNbQ9f1_aJvsfUz6vrdZ5r4OHtfPPZpRn2geoeXFk8WHohf36W4geRN4KfoW3VRhCOK95axhTkTDUEP_pQbIn0saUgGIeTWU4I_nZT_JGdhl_Wk5T_SH7wGEyMeZPQVp3Z_FemyZKXb1nDAAqluRxyI_TdsaWOpxdb4KzgrZnLO-qBgwvUqroV2hfaNje2yZei7n_EIW5thysDNPYLycz6amxe6XI6b51Ki3FOpWY8Rt7ML0nQ1wWnak4LBmFKjiF81QqscZqJzoPICEBtM3vr_yXp4HmcdXnYewF7EiBGmP-BYNpfWH2EBDI4u-eI51yq_0vlrO5VXd_kTDgm6_9uJDs0y3vN4avgvDJ6iUUkAzDCKgdZaZgaLpmHKHd_XA_0mar0s3Nse7jPy2jwAGRTm8bPlU6cvqg1xE_o9XAz9opJC8vLc0DAI9jnSZsYd7ntoj27QbYR-R8ABtK91VWWqCZkfkbh-O-thKOR2ix_KZUR90OWm0szA8ka9yUUomPhQ9gxc3Gri_Q8ZNrjDe3I6aznyk7xeJGs_GmoPzP2rACk" width="200" />
+  <img src="https://lh3.googleusercontent.com/09VF7Motbe-cQ7-rP1irHnhmWo1YUv5maqhOusnvkgHHlmHuKOiFTPcFdYMpt4A2wd3Wp4SkMD-FfDKz-54hr0VQYdwz8IYvaeQO4ewdKxxWYuuFIlOsKFgkV_vgcOYaMRVXy5cjmRN5ps3KXEfSLN_ckda66P379lS-1CyEo13ODbzgk4BvwyFKXuZlTOr2sQ2JkofHvbCGC8D0Za98Ie_j0aFTGCOE8ilATYDRxmLnosS9m4UjtCOV4uyd24i-YdsgCzMUkcdbcbCsyUYcG5HPVInTIFyrOgEMk3tSZr2fvk-Dvu0A53g1NA2UIrZ-ivG1Eix847_Qqjet3FZnCbDt2Xr85Ja9CSisyBuzBbEg0KgUbMIeeOOSjEySVhRwoEFavOfs3driL2h_rMLuOsEUHvqGtd00KklnWz_95Ym3YLO42C7-XdDq3x1D53ngVHlTgEurP3o4v3GGYfSPNWbs5Amtobiljh5jP4vPBZPYCLq2tpAIMKTEUgHeApdA_h_nT3Hgz3FAkL32Kwo8Ry-EdMrgVsPoMuAhYGoV91JJ1Yq81AB5uF8fQMxggzS_N_2VDNiDA8c_ivHmO87OXAsflNN6acasNGAaZ3xqN7fd4pNG8oRcJVCmniuss1mYJZETIFsQeQngBB7DBYcyKygVUDBLq9E=w413-h733-no" width="200" />
+</p>
+
+No desenvolvimento do app foi utilizado as seguintes libs:
+
+-Libs de suporte, **Room, Lifecycle(ViewModel+LiveData)**
+
+-**[BRVAH](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)** Lib que abstrai grande parte do boilerplate da implementação do RecyclerView
+
+-**[Glide](https://github.com/bumptech/glide)** Lib para imagens
+
+-**[EventBus](https://github.com/greenrobot/EventBus)** Para comunicação de eventos entre Activity e Fragments
+
+-**[Retrofit](https://square.github.io/retrofit/)** Lib para consumir API`s
