@@ -1,7 +1,5 @@
 # Zup Filmes
 
-App para pesquisa de filmes utilizando a api [OMDb API](http://www.omdbapi.com/)
-
 
 <p float="left">  
   <img src="https://lh3.googleusercontent.com/S-6hQSdcremxj_u6-CKXH9jizu9OFNBzHttit2TG7PirOQFAGACsAAOSU1o8Xrg9PhfgdNL2UfBz8PXQU6u9FSu2fhxfyPqQaC1YUmEWXNMBfsuWL6Ck7cTSOqnsdQZA5rT44VNd37vnr-r3WUtoAMmPzrENTXJnL563LuLOKblrQEfATHAH_15ouGQjy3fXm0kpYkLNH7GI1EcBHgd9viJQq_Au3T7kBfhwYgeTrPknS3MkjP7wqktOuCGatbkt3-ByKz9T-aN0y-VrRNfNg10qdcaY_VwSx9qiKF2QIyMRiDed9xauFFxd8izabN4m4Tfgx6_pyepkBVWrjn1fs9HLa_aqnqTPXJZweGIie9-AsIvoFWd8-om24-ymmrvgQKukK4yuF22Ja2RLAx8lAategDnjEJhIPpDjY57eMhvVfZX8W2gwaNlJk5jjPkBND5zv5xJjZ9IxFKR3IV2_3XFFYQdR5rYzrTJvJdcoR4KalcY0bqGKiEWFZuL5b86wFn9waXyTGD0zQnynGCfMluE3O3ucjpD5T0VAmVZmXrD4MDA9ZnN4SYLkYKCV1nYSpAms-nm3QT4N0dX1gbehKsOKZSnkHA88GtxgFekqysMeoD1-pfCjMD4OHbCcf3DcgV7OhoToqCL99N1oiW_REVGEMZqruaQ=w413-h733-no" width="200" /> 
