@@ -13,6 +13,7 @@ import br.com.felipebertanha.zupfilmes.eventbus.BuscarFilmeEvent
 import br.com.felipebertanha.zupfilmes.eventbus.ExibirDetalhesFilmeEvent
 import br.com.felipebertanha.zupfilmes.ui.adapter.FilmeAdapter
 import br.com.felipebertanha.zupfilmes.ui.viewmodel.FilmesViewModel
+import br.com.felipebertanha.zupfilmes.utils.InternetUtils
 import kotlinx.android.synthetic.main.fragment_filmes.view.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -48,30 +49,37 @@ class FilmesFragment : Fragment() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        EventBus.getDefault().register(this)
-    }
-
-    override fun onPause() {
-        EventBus.getDefault().unregister(this)
-        super.onPause()
+    override fun setUserVisibleHint(isVisibleToUser: Boolean) {
+        super.setUserVisibleHint(isVisibleToUser)
+        if (isVisibleToUser) {
+            EventBus.getDefault().register(this)
+        } else {
+            EventBus.getDefault().unregister(this)
+        }
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onBuscarFilme(event: BuscarFilmeEvent) {
         val query = event.query
+        if (context == null) {
+            return
+        }
+        if (!InternetUtils.temConexaoInternet(context!!)) {
+            Toast.makeText(context, "Sem conexão com a internet!", Toast.LENGTH_LONG).show()
+            return
+        }
         viewModel.buscarFilmePorTituloWS(query, object : Callback<Filme> {
 
-            override fun onResponse(call: Call<Filme>, response: Response<Filme>?) {
-                response?.let {
-                    val list = listOf(it.body())
+            override fun onResponse(call: Call<Filme>, response: Response<Filme>) {
+
+                val list = mutableListOf(response.body()!!)
+
                     filmeAdapter.setNewData(list)
-                }
+
             }
 
             override fun onFailure(call: Call<Filme>, t: Throwable) {
-                Toast.makeText(activity, t.message, Toast.LENGTH_LONG).show()
+                Toast.makeText(context, t.message, Toast.LENGTH_LONG).show()
             }
         })
     }

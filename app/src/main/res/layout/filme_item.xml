@@ -1,73 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="?android:attr/selectableItemBackground"
-        android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
 
     <ImageView
-            android:id="@+id/filme_item_imagem"
-            android:layout_width="@dimen/filme_largura"
-            android:layout_height="@dimen/filme_altura"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@drawable/ic_broken_image_accent_24dp"/>
+        android:id="@+id/filme_item_imagem"
+        android:layout_width="@dimen/filme_largura"
+        android:layout_height="@dimen/filme_altura"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@drawable/ic_broken_image_accent_24dp" />
 
     <TextView
-            android:id="@+id/filme_item_titulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:textSize="@dimen/font_size_normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/filme_item_imagem"
-            tools:text="Pulp Fiction"
-            app:layout_constraintTop_toTopOf="@+id/filme_item_imagem"/>
+        android:id="@+id/filme_item_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="@dimen/font_size_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/filme_item_imagem"
+        app:layout_constraintTop_toTopOf="@+id/filme_item_imagem"
+        tools:text="Pulp Fiction" />
 
     <TextView
-            android:id="@+id/filme_item_ano"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
-            android:textSize="@dimen/font_size_pequena"
-            app:layout_constraintStart_toEndOf="@+id/filme_item_imagem"
-            app:layout_constraintTop_toBottomOf="@+id/filme_item_titulo"
-            tools:text="1998"/>
+        android:id="@+id/filme_item_ano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:textSize="@dimen/font_size_pequena"
+        app:layout_constraintStart_toEndOf="@+id/filme_item_imagem"
+        app:layout_constraintTop_toBottomOf="@+id/filme_item_titulo"
+        tools:text="1998" />
 
     <TextView
-            android:id="@+id/filme_item_nota"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
-            android:textSize="@dimen/font_size_pequena"
-            app:layout_constraintStart_toEndOf="@+id/filme_item_imagem"
-            app:layout_constraintTop_toBottomOf="@+id/filme_item_ano"
-            tools:text="9.5/10"/>
+        android:id="@+id/filme_item_nota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:textSize="@dimen/font_size_pequena"
+        app:layout_constraintStart_toEndOf="@+id/filme_item_imagem"
+        app:layout_constraintTop_toBottomOf="@+id/filme_item_ano"
+        tools:text="9.5/10" />
 
     <TextView
-            android:id="@+id/filme_item_diretor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
-            android:textSize="@dimen/font_size_pequena"
-            app:layout_constraintStart_toEndOf="@+id/filme_item_imagem"
-            app:layout_constraintTop_toBottomOf="@+id/filme_item_nota"
-            tools:text="Quentin Tarantino"/>
+        android:id="@+id/filme_item_diretor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:textSize="@dimen/font_size_pequena"
+        app:layout_constraintStart_toEndOf="@+id/filme_item_imagem"
+        app:layout_constraintTop_toBottomOf="@+id/filme_item_nota"
+        tools:text="Quentin Tarantino" />
 </androidx.constraintlayout.widget.ConstraintLayout>

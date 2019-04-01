@@ -10,11 +10,14 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.felipebertanha.zupfilmes.R
 import br.com.felipebertanha.zupfilmes.data.model.Filme
+import br.com.felipebertanha.zupfilmes.eventbus.BuscarFilmeEvent
 import br.com.felipebertanha.zupfilmes.eventbus.ExibirDetalhesFilmeEvent
 import br.com.felipebertanha.zupfilmes.ui.adapter.FilmeAdapter
 import br.com.felipebertanha.zupfilmes.ui.viewmodel.FilmesViewModel
 import kotlinx.android.synthetic.main.fragment_favoritos.view.*
 import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 
 class FavoritosFragment : Fragment() {
 
@@ -41,7 +44,7 @@ class FavoritosFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel.todosFilmesFavoritos()
             ?.observe(this, Observer {
-                filmeAdapter.setNewData(it)
+                filmeAdapter.setNewData(it.toMutableList())
             })
     }
 
@@ -53,6 +56,21 @@ class FavoritosFragment : Fragment() {
 
             EventBus.getDefault().post(ExibirDetalhesFilmeEvent(filme))
         }
+    }
+
+    override fun setUserVisibleHint(isVisibleToUser: Boolean) {
+        super.setUserVisibleHint(isVisibleToUser)
+        if (isVisibleToUser) {
+            EventBus.getDefault().register(this)
+        } else {
+            EventBus.getDefault().unregister(this)
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onBuscarFilme(event: BuscarFilmeEvent) {
+        val query = event.query
+        filmeAdapter.filter!!.filter(query)
     }
 
 

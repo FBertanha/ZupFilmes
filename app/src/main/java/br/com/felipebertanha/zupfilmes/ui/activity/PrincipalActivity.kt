@@ -75,6 +75,7 @@ class PrincipalActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextChange(query: String): Boolean {
+                efetuarPesquisa(query)
                 return false
             }
         })
